@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Gaana Web
+Comment=Open open.gaana.com in app-mode google-chrome-stable
+Exec=google-chrome-stable --app="https://gaana.com/"
+Icon=gaana-web
+Type=Application
+Terminal=False
+Categories=Audio;Player;Music;Network;

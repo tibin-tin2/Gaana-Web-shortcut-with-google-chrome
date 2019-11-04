@@ -1,0 +1,21 @@
+# Maintainer: tibin_tin2
+pkgname=gaana-web-shortcut
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Desktop shortcut for Gaana Web application"
+arch=('any')
+license=('MIT')
+depends=('google-chrome')
+source=('gaana-web.desktop'
+        'gaana-web.png')
+md5sums=('d098b8e451e8bdb3d827efb8775378ff'
+         '3ee16e09ea2cf020a86550b94938b734')
+options=(!strip)
+
+package() {
+  cd "$srcdir"
+  install -d "${pkgdir}/usr/share/applications"
+  install -d "${pkgdir}/usr/share/pixmaps"
+  install -m644 "${srcdir}/gaana-web.desktop" "${pkgdir}/usr/share/applications/gaana-web.desktop"
+  install -m644 "${srcdir}/gaana-web.png" "${pkgdir}/usr/share/pixmaps/gaana-web.png"
+}
